@@ -1,3 +1,4 @@
+res.setHeader('Access-Control-Allow-Origin', '*');
 export default async function handler(req, res) {
     const { year, month, date } = req.query;
 
