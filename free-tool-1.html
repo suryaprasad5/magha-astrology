@@ -464,32 +464,30 @@ function displayGurubalaResult(result) {
 
 </script>
 <script>
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
     const today = new Date();
     const yyyy = today.getFullYear();
-    const mm = String(today.getMonth() + 1).padStart(2, '0');
-    const dd = String(today.getDate()).padStart(2, '0');
-    const dateString = `${yyyy}-${mm}-${dd}`;
+    const mm = today.getMonth() + 1; // no leading zero
+    const dd = today.getDate();      // no leading zero
 
-    $.ajax({
-        url: `https://freeastrologyapi.com/api/v1/panchang?date=${dateString}&location=Bangalore`,
-        method: 'GET',
-        headers: {
-            'Authorization': 'Slr5QqH2y34OvWg5NOTyi4EkVyn1jQS73nXKZT51'
-        },
-        success: function (data) {
+    const url = `https://maghaastro.infinityfreeapp.com/api-proxy.php?year=${yyyy}&month=${mm}&date=${dd}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data); // debug
+
             if (data.nakshatra) {
-                $('#liveNakshatra').text(data.nakshatra);
-                $('#todayNakshatra').val(data.nakshatra);
+                document.getElementById('liveNakshatra').innerText = data.nakshatra;
+                document.getElementById('todayNakshatra').value = data.nakshatra;
             } else {
-                $('#liveNakshatra').text('Not available');
+                document.getElementById('liveNakshatra').innerText = 'Not available';
             }
-        },
-        error: function (xhr, status, error) {
-            console.error(error);
-            $('#liveNakshatra').text('Error fetching Nakshatra');
-        }
-    });
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            document.getElementById('liveNakshatra').innerText = 'Error fetching Nakshatra';
+        });
 });
 </script>
 </body>
