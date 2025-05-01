@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magha Astrology - Tools</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="Magha-logo.png" type="image/png" />
+</head>
+<body class="free-tool-2">
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="Magha-logo.png" alt="Magha Astrology Logo" />
+        </a>
+        <h1>Magha Vedic Astro & Vastu Solutions</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="astrologers.html">Our Astrologers</a></li>
+            <li>
+                <a href="free-tools.html">Free Tools</a>
+                <ul>
+                    <li><a href="free-tool-1.html">Taarabala, Chandrabala and Gurubala Calculator</a></li>
+                    <li><a href="free-tool-2.html">Panchaka Calculator</a></li>
+                    <li><a href="free-tool-3.html">Kuja Dosha Calculator</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+    <main>
+        <div class="tool-frame">
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taarabala, Chandrabala and Gurubala Calculator</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        max-width: 600px;
+        margin: auto;
+    }
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    #result {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+    #chandraResult {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+    .good {
+        background-color: lightgreen;
+    }
+    .not-good {
+        background-color: lightcoral;
+    }
+	    .creator-note {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 12px;
+        color: #888;
+    }
+	.container p {
+        text-align: justify;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Taarabala, Chandrabala and Gurubala Calculator</h2>
+	<p><strong>What it means</strong></p>
+    <p><strong>Taarabala:</strong> Taarabala refers to the strength or influence of a star (nakshatra) in relation to a person's natal Moon. It is one of the many factors used in the evaluation of astrological charts, particularly for determining the auspiciousness of starting new ventures, performing rituals, or other significant activities. Nakshatras falling under Sampat, Kshema, Sadhana, Mitra, and Parama Mitra are generally considered auspicious. Nakshatras under Vipat, Pratyak, and Naidhana are considered inauspicious.</p>
+    <p><strong>Chandrabala:</strong> Chandrabala refers to the strength and favorable position of the Moon in a person's chart at a given time. It is considered an important factor in determining the auspiciousness of activities, especially those that are initiated or performed based on astrological timings (muhurta). Generally, the Moon is considered auspicious when it is in the 1st (Janma), 3rd, 6th, 7th, 10th, and 11th houses from the natal Moon. The Moon is considered inauspicious when it is in the 2nd, 4th, 5th, 8th, 9th, and 12th houses from the natal Moon.</p>
+    <p><strong>Gurubala:</strong> Gurubala refers to the strength and favorable position of Jupiter (Guru) in a person's chart at a given time. Jupiter is considered the most benefic planet in Vedic astrology, associated with wisdom, prosperity, spiritual growth, and overall well-being. The concept of Gurubala is used to determine the auspiciousness of times for initiating important activities, spiritual practices, and making significant decisions.</p>
+    <p><strong>How to use:</strong> This is a Taarabala, Chandrabala, and Gurubala Calculator. One can use this and get to know their current balas. These balas are usually used to get to know individuals' balas for any specified day. Select your nakshatra and the day's nakshatra for which day you would like to check. The same way, for Chandrabala select your Rashi and the current Chandra Rashi (where Chandra is placed). For Gurubala, select your Rashi and current Guru Rashi (where Guru is placed).</p>
+    <h3>Taarabala Calculation</h3>
+    <label for="nakshatra">Your Nakshatra:</label>
+    <select id="nakshatra">
+        <option value="Ashwini">Ashwini</option>
+        <option value="Bharani">Bharani</option>
+		<option value="Krittika">Krittika</option>
+		<option value="Rohini">Rohini</option>
+		<option value="Mrigashira">Mrigashira</option>
+		<option value="Ardra">Ardra</option>
+		<option value="Punarvasu">Punarvasu</option>
+		<option value="Pushya">Pushya</option>
+		<option value="Ashlesha">Ashlesha</option>
+		<option value="Magha">Magha</option>
+		<option value="Purva Phalguni (Pubba)">Purva Phalguni (Pubba)</option>
+		<option value="Uttara Phalguni (Uttara)">Uttara Phalguni (Uttara)</option>
+		<option value="Hasta">Hasta</option>
+		<option value="Chitra">Chitra</option>
+		<option value="Swati">Swati</option>
+		<option value="Vishakha">Vishakha</option>
+		<option value="Anuradha">Anuradha</option>
+		<option value="Jyeshtha">Jyeshtha</option>
+		<option value="Mula">Mula</option>
+		<option value="Purva Ashadha">Purva Ashadha</option>
+		<option value="Uttara Ashadha">Uttara Ashadha</option>
+		<option value="Shravana">Shravana</option>
+		<option value="Dhanishta">Dhanishta</option>
+		<option value="Shatabhisha">Shatabhisha</option>
+		<option value="Purva Bhadrapada">Purva Bhadrapada</option>
+		<option value="Uttara Bhadrapada">Uttara Bhadrapada</option>
+		<option value="Revati">Revati</option>
+    </select>
+    <label for="todayNakshatra">Today's Nakshatra:</label>
+    <select id="todayNakshatra">
+	<p><strong>Today's Nakshatra from Panchanga(Select this in above drop down): </strong> <span id="liveNakshatra">Loading...</span></p>
+        <option value="Ashwini">Ashwini</option>
+        <option value="Bharani">Bharani</option>
+		<option value="Krittika">Krittika</option>
+		<option value="Rohini">Rohini</option>
+		<option value="Mrigashira">Mrigashira</option>
+		<option value="Ardra">Ardra</option>
+		<option value="Punarvasu">Punarvasu</option>
+		<option value="Pushya">Pushya</option>
+		<option value="Ashlesha">Ashlesha</option>
+		<option value="Magha">Magha</option>
+		<option value="Purva Phalguni (Pubba)">Purva Phalguni (Pubba)</option>
+		<option value="Uttara Phalguni (Uttara)">Uttara Phalguni (Uttara)</option>
+		<option value="Hasta">Hasta</option>
+		<option value="Chitra">Chitra</option>
+		<option value="Swati">Swati</option>
+		<option value="Vishakha">Vishakha</option>
+		<option value="Anuradha">Anuradha</option>
+		<option value="Jyeshtha">Jyeshtha</option>
+		<option value="Mula">Mula</option>
+		<option value="Purva Ashadha">Purva Ashadha</option>
+		<option value="Uttara Ashadha">Uttara Ashadha</option>
+		<option value="Shravana">Shravana</option>
+		<option value="Dhanishta">Dhanishta</option>
+		<option value="Shatabhisha">Shatabhisha</option>
+		<option value="Purva Bhadrapada">Purva Bhadrapada</option>
+		<option value="Uttara Bhadrapada">Uttara Bhadrapada</option>
+		<option value="Revati">Revati</option>
+    </select>
+    <button onclick="calculateTaarabala()">Calculate Taarabala</button>
+    <div id="result"></div>
+    <p><strong>Note:</strong> If unavoidable, donate Vegetable for Janmataare, Jaggery for Viapattaare, Salt for Pratyaktaare, Sesame, gold, cloths etc., for Vadhataare. The dosha could be resolved if these donations are made.</p>
+
+    <h3>Chandrabala Calculation</h3>
+    <label for="rashi">Your Raashi:</label>
+    <select id="rashi">
+        <option value="Aeris/Mesha">Aeris/Mesha</option>
+        <option value="Taurus/Vrishabha">Taurus/Vrishabha</option>
+		<option value="Gemini/Mithuna">Gemini/Mithuna</option>
+		<option value="Cancer/Karkataka">Cancer/Karkataka</option>
+		<option value="Leo/Simha">Leo/Simha</option>
+		<option value="Virgo/Kanya">Virgo/Kanya</option>
+		<option value="Libra/Tula">Libra/Tula</option>
+		<option value="Scorpion/Vrischika">Scorpion/Vrischika</option>
+		<option value="Sagittarius/Dhanu">Sagittarius/Dhanu</option>
+		<option value="Capricorn/Makara">Capricorn/Makara</option>
+		<option value="Aquarius/Kumbha">Aquarius/Kumbha</option>
+		<option value="Pieces/Meena">Pieces/Meena</option>
+    </select>
+    <label for="currentChandraRaashi">Current Chandra Raashi:</label>
+    <select id="currentChandraRaashi">
+        <option value="Aeris/Mesha">Aeris/Mesha</option>
+        <option value="Taurus/Vrishabha">Taurus/Vrishabha</option>
+		<option value="Gemini/Mithuna">Gemini/Mithuna</option>
+		<option value="Cancer/Karkataka">Cancer/Karkataka</option>
+		<option value="Leo/Simha">Leo/Simha</option>
+		<option value="Virgo/Kanya">Virgo/Kanya</option>
+		<option value="Libra/Tula">Libra/Tula</option>
+		<option value="Scorpion/Vrischika">Scorpion/Vrischika</option>
+		<option value="Sagittarius/Dhanu">Sagittarius/Dhanu</option>
+		<option value="Capricorn/Makara">Capricorn/Makara</option>
+		<option value="Aquarius/Kumbha">Aquarius/Kumbha</option>
+		<option value="Pieces/Meena">Pieces/Meena</option>
+    </select>
+    <button onclick="calculateChandrabala()">Calculate Chandrabala</button>
+    <div id="chandraResult"></div>
+	<h4>Gurubala Calculation</h4>
+	<label for="yourRaashi">Your Raashi:</label>
+	<select id="yourRaashi">
+        <option value="Aeris/Mesha">Aeris/Mesha</option>
+        <option value="Taurus/Vrishabha">Taurus/Vrishabha</option>
+		<option value="Gemini/Mithuna">Gemini/Mithuna</option>
+		<option value="Cancer/Karkataka">Cancer/Karkataka</option>
+		<option value="Leo/Simha">Leo/Simha</option>
+		<option value="Virgo/Kanya">Virgo/Kanya</option>
+		<option value="Libra/Tula">Libra/Tula</option>
+		<option value="Scorpion/Vrischika">Scorpion/Vrischika</option>
+		<option value="Sagittarius/Dhanu">Sagittarius/Dhanu</option>
+		<option value="Capricorn/Makara">Capricorn/Makara</option>
+		<option value="Aquarius/Kumbha">Aquarius/Kumbha</option>
+		<option value="Pieces/Meena">Pieces/Meena</option>
+	</select>
+	<label for="currentGuruRaashi">Current Guru Raashi:</label>
+	<select id="currentGuruRaashi">
+        <option value="Aeris/Mesha">Aeris/Mesha</option>
+        <option value="Taurus/Vrishabha">Taurus/Vrishabha</option>
+		<option value="Gemini/Mithuna">Gemini/Mithuna</option>
+		<option value="Cancer/Karkataka">Cancer/Karkataka</option>
+		<option value="Leo/Simha">Leo/Simha</option>
+		<option value="Virgo/Kanya">Virgo/Kanya</option>
+		<option value="Libra/Tula">Libra/Tula</option>
+		<option value="Scorpion/Vrischika">Scorpion/Vrischika</option>
+		<option value="Sagittarius/Dhanu">Sagittarius/Dhanu</option>
+		<option value="Capricorn/Makara">Capricorn/Makara</option>
+		<option value="Aquarius/Kumbha">Aquarius/Kumbha</option>
+		<option value="Pieces/Meena">Pieces/Meena</option>
+	</select>
+	<button onclick="calculateGurubala()">Calculate Gurubala</button>
+	<div id="gurubalaResult" style="margin-top: 20px;"></div>
+    <div class="creator-note">Created by: Surya Prasad CA, Mob: 9008777578 (Version 4.0)</div>
+</div>
+</div>
+<script>
+    var nakshatras = ['Ashwini', 'Bharani', 'Krittika', 'Rohini', 'Mrigashira', 'Ardra', 'Punarvasu', 'Pushya', 'Ashlesha', 'Magha', 'Purva Phalguni (Pubba)', 'Uttara Phalguni (Uttara)', 'Hasta', 'Chitra', 'Swati', 'Vishakha', 'Anuradha', 'Jyeshtha', 'Mula', 'Purva Ashadha', 'Uttara Ashadha', 'Shravana', 'Dhanishta', 'Shatabhisha', 'Purva Bhadrapada', 'Uttara Bhadrapada', 'Revati'];
+    var rashis = ['Aeris/Mesha', 'Taurus/Vrishabha', 'Gemini/Mithuna', 'Cancer/Karkataka', 'Leo/Simha', 'Virgo/Kanya', 'Libra/Tula', 'Scorpion/Vrischika', 'Sagittarius/Dhanu', 'Capricorn/Makara', 'Aquarius/Kumbha', 'Pieces/Meena'];
+    var taarabalaResults = ['Janmataare (Not good)', 'Sampattaare (Good)', 'Vipattaare (Not good)', 'Kshemataare (Good)', 'Pratyaktaare (Not good)', 'Saadhakataare (Good)', 'Vadhataare (Not good)', 'Mitrataare (Good)', 'Paramamaitrataare (Good)'];
+function calculateTaarabala() {
+    var nakshatraList = document.getElementById("nakshatra");
+    var todayNakshatraList = document.getElementById("todayNakshatra");
+    var selectedNakshatra = nakshatraList.value;
+    var todayNakshatra = todayNakshatraList.value;
+
+    var nakshatraIndex = nakshatras.indexOf(selectedNakshatra);
+    var todayNakshatraIndex = nakshatras.indexOf(todayNakshatra);
+
+    if (nakshatraIndex !== -1 && todayNakshatraIndex !== -1) {
+        var count = 0;
+
+        // Iterate through each nakshatra until today's nakshatra is reached
+        for (var i = nakshatraIndex; i !== todayNakshatraIndex; i = (i + 1) % nakshatras.length) {
+            count++;
+        }
+
+        // Add 1 for the final nakshatra (today's nakshatra)
+        count++;
+
+        // Calculate the remainder when divided by 9
+        var remainder = count % 9;
+
+        // Get the corresponding taarabala result
+        var resultTaarabala = taarabalaResults[remainder === 0 ? 8 : remainder - 1];
+
+        // Display the result
+        document.getElementById("result").innerText = "Taarabala for the selected Nakshatras is: " + resultTaarabala;
+    } else {
+        document.getElementById("result").innerText = "One or both of the selected Nakshatras were not found in the list.";
+    }
+
+    // Set background color based on result
+    var resultElement = document.getElementById("result");
+    var resultText = resultElement.innerText;
+    if (resultText.includes("Good")) {
+        resultElement.style.backgroundColor = "lightgreen";
+    } else if (resultText.includes("Not good")) {
+        resultElement.style.backgroundColor = "lightcoral";
+    } else {
+        // Reset to default styling if neither "Good" nor "Not good" is found
+        resultElement.style.backgroundColor = "";
+    }
+}
+function calculateChandrabala() {
+    var rashiList = document.getElementById("rashi");
+    var currentChandraRaashiList = document.getElementById("currentChandraRaashi");
+    var selectedRashi = rashiList.value;
+    var currentChandraRaashi = currentChandraRaashiList.value;
+
+    var rashiIndex = rashis.indexOf(selectedRashi);
+    var currentChandraRaashiIndex = rashis.indexOf(currentChandraRaashi);
+
+    if (rashiIndex !== -1 && currentChandraRaashiIndex !== -1) {
+        var count = getCountForChandrabala(selectedRashi, currentChandraRaashi);
+        var chandrabalaResult = getChandrabalaResult(count);
+        document.getElementById("chandraResult").innerText = "Chandrabala for the selected Rashis is: " + chandrabalaResult;
+    } else {
+        document.getElementById("chandraResult").innerText = "One or both of the selected Rashis were not found in the list.";
+    }
+	var chandraResultElement = document.getElementById("chandraResult");
+	var chandraResultText = "Chandrabala for the selected Rashis is: " + chandrabalaResult;
+    chandraResultElement.innerText = chandraResultText;
+	   if (chandraResultText.includes("Good")) {
+        chandraResultElement.style.backgroundColor = "lightgreen";
+    } else if (chandraResultText.includes("Not good")) {
+        chandraResultElement.style.backgroundColor = "lightcoral";
+    } else {
+        // Reset to default styling if neither "Good" nor "Not good" is found
+        chandraResultElement.style.backgroundColor = "";
+    }	
+}
+
+function getCountForChandrabala(selectedRashi, currentChandraRaashi) {
+    var selectedRashiIndex = rashis.indexOf(selectedRashi);
+    var currentChandraRaashiIndex = rashis.indexOf(currentChandraRaashi);
+
+    if (selectedRashiIndex <= currentChandraRaashiIndex) {
+        return currentChandraRaashiIndex - selectedRashiIndex + 1;
+    } else {
+        return rashis.length - selectedRashiIndex + currentChandraRaashiIndex + 1;
+    }
+}
+function getChandrabalaResult(count) {
+    switch (count) {
+        case 1:
+            return 'Dehasoukhya (Good)';
+        case 2:
+            return 'Kalaha (Not good)';
+        case 3:
+            return 'Dravyalaabha (Good)';
+        case 4:
+            return 'Rogabhaya (Not good)';
+        case 5:
+            return 'Karyavikalpa (Not good)';
+        case 6:
+            return 'Shatrunaasha (Good)';
+        case 7:
+            return 'Soukhyavriddhi (Good)';
+        case 8:
+            return 'Arogyavriddhi (Good)';
+        case 9:
+            return 'Karyataamasa (Not good)';
+        case 10:
+            return 'Udyogavriddhi (Good)';
+        case 11:
+            return 'Ishtarthasiddhi (Good)';
+        case 12:
+            return 'Dhanavyaya (Not good)';
+        default:
+            return 'Invalid count';
+    }
+}
+
+function highlightResult(elementId, result) {
+    var element = document.getElementById(elementId);
+    element.innerText = result;
+    element.classList.remove("good", "not-good"); // Remove existing classes
+    if (result.includes("Good")) {
+        element.classList.add("good");
+    } else if (result.includes("Not good")) {
+        element.classList.add("not-good");
+    }
+}
+function calculateGurubala() {
+    var yourRaashiList = document.getElementById("yourRaashi");
+    var currentGuruRaashiList = document.getElementById("currentGuruRaashi");
+    var yourRaashi = yourRaashiList.value;
+    var currentGuruRaashi = currentGuruRaashiList.value;
+
+    // Check if both Raashis are selected
+    if (yourRaashi && currentGuruRaashi) {
+        var combination = yourRaashi + " - " + currentGuruRaashi;
+        var result = getGurubalaResult(combination);
+        displayGurubalaResult(result);
+    } else {
+        displayGurubalaResult("Please select both your Raashi and current Guru Raashi.");
+    }
+}
+function getGurubalaResult(combination) {
+    switch (combination) {
+        case "Aeris/Mesha - Taurus/Vrishabha":
+        case "Aeris/Mesha - Leo/Simha":
+        case "Aeris/Mesha - Libra/Tula":
+        case "Aeris/Mesha - Sagittarius/Dhanu":
+        case "Aeris/Mesha - Aquarius/Kumbha":
+        case "Taurus/Vrishabha - Gemini/Mithuna":
+        case "Taurus/Vrishabha - Virgo/Kanya":
+        case "Taurus/Vrishabha - Scorpion/Vrischika":
+        case "Taurus/Vrishabha - Capricorn/Makara":
+        case "Taurus/Vrishabha - Pieces/Meena":
+        case "Gemini/Mithuna - Aeris/Mesha":
+        case "Gemini/Mithuna - Cancer/Karkataka":
+        case "Gemini/Mithuna - Libra/Tula":
+        case "Gemini/Mithuna - Sagittarius/Dhanu":
+        case "Gemini/Mithuna - Aquarius/Kumbha":
+        case "Cancer/Karkataka - Taurus/Vrishabha":
+        case "Cancer/Karkataka - Leo/Simha":
+        case "Cancer/Karkataka - Scorpion/Vrischika":
+        case "Cancer/Karkataka - Capricorn/Makara":
+        case "Cancer/Karkataka - Pieces/Meena":
+        case "Leo/Simha - Aeris/Mesha":
+        case "Leo/Simha - Gemini/Mithuna":
+        case "Leo/Simha - Virgo/Kanya":
+        case "Leo/Simha - Sagittarius/Dhanu":
+        case "Leo/Simha - Aquarius/Kumbha":
+        case "Virgo/Kanya - Taurus/Vrishabha":
+        case "Virgo/Kanya - Cancer/Karkataka":
+        case "Virgo/Kanya - Libra/Tula":
+        case "Virgo/Kanya - Capricorn/Makara":
+        case "Virgo/Kanya - Pieces/Meena":
+        case "Libra/Tula - Aeris/Mesha":
+        case "Libra/Tula - Gemini/Mithuna":
+        case "Libra/Tula - Leo/Simha":
+        case "Libra/Tula - Scorpion/Vrischika":
+        case "Libra/Tula - Aquarius/Kumbha":
+        case "Scorpion/Vrischika - Taurus/Vrishabha":
+        case "Scorpion/Vrischika - Cancer/Karkataka":
+        case "Scorpion/Vrischika - Virgo/Kanya":
+        case "Scorpion/Vrischika - Sagittarius/Dhanu":
+        case "Scorpion/Vrischika - Pieces/Meena":
+        case "Sagittarius/Dhanu - Aeris/Mesha":
+        case "Sagittarius/Dhanu - Gemini/Mithuna":
+        case "Sagittarius/Dhanu - Leo/Simha":
+        case "Sagittarius/Dhanu - Libra/Tula":
+        case "Sagittarius/Dhanu - Capricorn/Makara":
+        case "Capricorn/Makara - Taurus/Vrishabha":
+        case "Capricorn/Makara - Cancer/Karkataka":
+        case "Capricorn/Makara - Virgo/Kanya":
+        case "Capricorn/Makara - Scorpion/Vrischika":
+        case "Capricorn/Makara - Aquarius/Kumbha":
+        case "Aquarius/Kumbha - Gemini/Mithuna":
+        case "Aquarius/Kumbha - Leo/Simha":
+        case "Aquarius/Kumbha - Libra/Tula":
+        case "Aquarius/Kumbha - Sagittarius/Dhanu":
+        case "Aquarius/Kumbha - Pieces/Meena":
+        case "Pieces/Meena - Aeris/Mesha":
+        case "Pieces/Meena - Cancer/Karkataka":
+        case "Pieces/Meena - Virgo/Kanya":
+        case "Pieces/Meena - Scorpion/Vrischika":
+        case "Pieces/Meena - Capricorn/Makara":
+            return "Yes";
+        default:
+            return "No";
+    }
+}
+function displayGurubalaResult(result) {
+    document.getElementById("gurubalaResult").innerHTML = "Gurubala: " + result;
+}
+function displayGurubalaResult(result) {
+    var gurubalaResultElement = document.getElementById("gurubalaResult");
+    gurubalaResultElement.innerText = "Gurubala for the selected Raashis is: " + result;
+
+    // Apply styling based on result content
+    if (result === "Yes") {
+        gurubalaResultElement.style.backgroundColor = "lightgreen";
+    } else {
+        gurubalaResultElement.style.backgroundColor = "lightcoral";
+    }
+}
+
+</script>
+<script>
+$(document).ready(function () {
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  const dateString = '${yyyy}-${mm}-${dd}';
+
+  $.get('https://freeastrologyapi.com/api/v1/panchang?date=${dateString}&location=Bangalore', function (data) {
+    if (data.nakshatra) {
+      $('#liveNakshatra').text(data.nakshatra);
+      $('#todayNakshatra').val(data.nakshatra);
+    } else {
+      $('#liveNakshatra').text('Not available');
+    }
+  }).fail(function () {
+    $('#liveNakshatra').text('Error fetching Nakshatra');
+  });
+});
+</script>
+</body>
+</html>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Magha Vedic Astro & Vastu Solutions. All rights reserved.
+    </footer>
+</body>
+</html>

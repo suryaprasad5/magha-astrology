@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magha Astrology - Tools</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="Magha-logo.png" type="image/png" />
+</head>
+<body class="free-tool-2">
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="Magha-logo.png" alt="Magha Astrology Logo" />
+        </a>
+        <h1>Magha Vedic Astro & Vastu Solutions</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="astrologers.html">Our Astrologers</a></li>
+            <li>
+                <a href="free-tools.html">Free Tools</a>
+                <ul>
+                    <li><a href="free-tool-1.html">Taarabala, Chandrabala and Gurubala Calculator</a></li>
+                    <li><a href="free-tool-2.html">Panchaka Calculator</a></li>
+                    <li><a href="free-tool-3.html">Kuja Dosha Calculator</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+    <main>
+        <div class="tool-frame">
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kuja Dosha Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #ff9933;
+    }
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+      font-weight: bold;
+    }
+    select, button {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #ff9933;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e68a00;
+    }
+    .result {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 1.2rem;
+      color: green;
+    }
+    .reason {
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 1rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Kuja Dosha Calculator</h1>
+
+  <form id="kujaForm">
+    <label for="birthTime">Birth Time Lagna (Rashi)</label>
+    <select id="birthTime" required>
+      <option value="">Select</option>
+      <option value="1">Mesha (Aries)</option>
+      <option value="2">Vrishabha (Taurus)</option>
+      <option value="3">Mithuna (Gemini)</option>
+      <option value="4">Karka (Cancer)</option>
+      <option value="5">Simha (Leo)</option>
+      <option value="6">Kanya (Virgo)</option>
+      <option value="7">Tula (Libra)</option>
+      <option value="8">Vrischika (Scorpio)</option>
+      <option value="9">Dhanu (Sagittarius)</option>
+      <option value="10">Makara (Capricorn)</option>
+      <option value="11">Kumbha (Aquarius)</option>
+      <option value="12">Meena (Pisces)</option>
+    </select>
+
+    <label for="nakshatra">Your Nakshatra:</label>
+    <select id="nakshatra" required>
+      <option value="">Select</option>
+      <option value="Ashwini">Ashwini</option>
+      <option value="Bharani">Bharani</option>
+      <option value="Krittika">Krittika</option>
+      <option value="Rohini">Rohini</option>
+      <option value="Mrigashira">Mrigashira</option>
+      <option value="Ardra">Ardra</option>
+      <option value="Punarvasu">Punarvasu</option>
+      <option value="Pushya">Pushya</option>
+      <option value="Ashlesha">Ashlesha</option>
+      <option value="Magha">Magha</option>
+      <option value="Purva Phalguni (Pubba)">Purva Phalguni (Pubba)</option>
+      <option value="Uttara Phalguni (Uttara)">Uttara Phalguni (Uttara)</option>
+      <option value="Hasta">Hasta</option>
+      <option value="Chitra">Chitra</option>
+      <option value="Swati">Swati</option>
+      <option value="Vishakha">Vishakha</option>
+      <option value="Anuradha">Anuradha</option>
+      <option value="Jyeshtha">Jyeshtha</option>
+      <option value="Mula">Mula</option>
+      <option value="Purva Ashadha">Purva Ashadha</option>
+      <option value="Uttara Ashadha">Uttara Ashadha</option>
+      <option value="Shravana">Shravana</option>
+      <option value="Dhanishta">Dhanishta</option>
+      <option value="Shatabhisha">Shatabhisha</option>
+      <option value="Purva Bhadrapada">Purva Bhadrapada</option>
+      <option value="Uttara Bhadrapada">Uttara Bhadrapada</option>
+      <option value="Revati">Revati</option>
+    </select>
+
+    <label for="chandra">Chandra House (Rashi)</label>
+    <select id="chandra" required>
+      <option value="">Select</option>
+      <!-- Same 1-12 options -->
+      <option value="1">Mesha (Aries)</option>
+      <option value="2">Vrishabha (Taurus)</option>
+      <option value="3">Mithuna (Gemini)</option>
+      <option value="4">Karka (Cancer)</option>
+      <option value="5">Simha (Leo)</option>
+      <option value="6">Kanya (Virgo)</option>
+      <option value="7">Tula (Libra)</option>
+      <option value="8">Vrischika (Scorpio)</option>
+      <option value="9">Dhanu (Sagittarius)</option>
+      <option value="10">Makara (Capricorn)</option>
+      <option value="11">Kumbha (Aquarius)</option>
+      <option value="12">Meena (Pisces)</option>
+    </select>
+
+    <label for="shukra">Shukra House (Rashi)</label>
+    <select id="shukra" required>
+      <option value="">Select</option>
+      <!-- Same 1-12 options -->
+      <option value="1">Mesha (Aries)</option>
+      <option value="2">Vrishabha (Taurus)</option>
+      <option value="3">Mithuna (Gemini)</option>
+      <option value="4">Karka (Cancer)</option>
+      <option value="5">Simha (Leo)</option>
+      <option value="6">Kanya (Virgo)</option>
+      <option value="7">Tula (Libra)</option>
+      <option value="8">Vrischika (Scorpio)</option>
+      <option value="9">Dhanu (Sagittarius)</option>
+      <option value="10">Makara (Capricorn)</option>
+      <option value="11">Kumbha (Aquarius)</option>
+      <option value="12">Meena (Pisces)</option>
+    </select>
+
+    <label for="kuja">Kuja House (Rashi)</label>
+    <select id="kuja" required>
+      <option value="">Select</option>
+      <!-- Same 1-12 options -->
+      <option value="1">Mesha (Aries)</option>
+      <option value="2">Vrishabha (Taurus)</option>
+      <option value="3">Mithuna (Gemini)</option>
+      <option value="4">Karka (Cancer)</option>
+      <option value="5">Simha (Leo)</option>
+      <option value="6">Kanya (Virgo)</option>
+      <option value="7">Tula (Libra)</option>
+      <option value="8">Vrischika (Scorpio)</option>
+      <option value="9">Dhanu (Sagittarius)</option>
+      <option value="10">Makara (Capricorn)</option>
+      <option value="11">Kumbha (Aquarius)</option>
+      <option value="12">Meena (Pisces)</option>
+    </select>
+
+    <label for="gender">Gender</label>
+    <select id="gender" required>
+      <option value="">Select</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+
+    <button type="submit">Calculate Kuja Dosha</button>
+  </form>
+
+  <div class="result" id="result"></div>
+  <div class="reason" id="reason"></div>
+
+<script>
+document.getElementById('kujaForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const birthTime = parseInt(document.getElementById('birthTime').value);
+    const chandra = parseInt(document.getElementById('chandra').value);
+    const shukra = parseInt(document.getElementById('shukra').value);
+    const kuja = parseInt(document.getElementById('kuja').value);
+    const gender = document.getElementById('gender').value;
+    const nakshatra = document.getElementById('nakshatra').value;
+
+    const kujaHouses = [1,2,4,5,7,8,12];
+    const maleExtraHouses = [2,7,8];
+    const femaleExtraHouses = [4,8,12];
+    const exceptionNakshatras = [
+        "Ashwini", "Mrigashira", "Punarvasu", "Pushya", "Ashlesha",
+        "Uttara Phalguni (Uttara)", "Swati", "Anuradha", "Purva Ashadha",
+        "Uttara Ashadha", "Shravana", "Uttara Bhadrapada", "Revati"
+    ];
+    
+    let kujaDoshaCount = 0;
+    let reasonText = "";
+
+    function calculateDistance(from, to) {
+        let dist = (to - from + 12) % 12;
+        return dist === 0 ? 12 : dist;
+    }
+
+    let lagnaDistance = calculateDistance(birthTime, kuja);
+    if (kujaHouses.includes(lagnaDistance)) {
+        kujaDoshaCount += 2;
+        if ((gender === "Male" && maleExtraHouses.includes(lagnaDistance)) ||
+            (gender === "Female" && femaleExtraHouses.includes(lagnaDistance))) {
+            kujaDoshaCount += 0.5;
+        }
+    }
+
+    let chandraDistance = calculateDistance(chandra, kuja);
+    if (kujaHouses.includes(chandraDistance)) {
+        kujaDoshaCount += 1;
+        if ((gender === "Male" && maleExtraHouses.includes(chandraDistance)) ||
+            (gender === "Female" && femaleExtraHouses.includes(chandraDistance))) {
+            kujaDoshaCount += 0.5;
+        }
+    }
+
+    let shukraDistance = calculateDistance(shukra, kuja);
+    if (kujaHouses.includes(shukraDistance)) {
+        kujaDoshaCount += 1;
+        if ((gender === "Male" && maleExtraHouses.includes(shukraDistance)) ||
+            (gender === "Female" && femaleExtraHouses.includes(shukraDistance))) {
+            kujaDoshaCount += 0.5;
+        }
+    }
+
+    // Apply Exceptions
+    if (exceptionNakshatras.includes(nakshatra)) {
+        kujaDoshaCount = 0;
+        reasonText = "Kuja Dosha canceled due to exception Nakshatra.";
+    } else if (chandra === 5 || chandra === 11) {
+        kujaDoshaCount = 0;
+        reasonText = "Kuja Dosha canceled due to Chandra Rashi being Simha or Kumbha.";
+    } else if (birthTime === 4 || birthTime === 5) {
+        kujaDoshaCount = 0;
+        reasonText = "Kuja Dosha canceled due to Lagna being Karka or Simha.";
+    } else {
+        // Apply Lagna Adjustments
+        if (birthTime === 9 || birthTime === 12) {
+            kujaDoshaCount = kujaDoshaCount / 2;
+            reasonText = "Kuja Dosha reduced by 50% due to Lagna being Dhanu or Meena.";
+        } else if (birthTime === 10 || birthTime === 11) {
+            kujaDoshaCount = kujaDoshaCount * 0.25;
+            reasonText = "Kuja Dosha reduced by 75% due to Lagna being Makara or Kumbha.";
+        } else if (birthTime === 1 || birthTime === 8) {
+            kujaDoshaCount = kujaDoshaCount * 0.75;
+            reasonText = "Kuja Dosha reduced by 25% due to Lagna being Mesha or Vrischika.";
+        }
+    }
+
+    document.getElementById('result').innerText = `Kuja Dosha Points: ${kujaDoshaCount.toFixed(2)}`;
+    document.getElementById('reason').innerText = reasonText;
+});
+</script>
+
+</body>
+</html>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Magha Vedic Astro & Vastu Solutions. All rights reserved.
+    </footer>
+</body>
+</html>

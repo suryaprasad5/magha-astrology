@@ -1,0 +1,414 @@
+/* Reset + Base */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scroll */
+    box-sizing: border-box;
+}
+
+/* Header styling */
+header {
+    background-color: #c62828; /* Deep Red */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 60px;
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 1.8em;
+    margin: 0;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 8px 12px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #c62828;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 160px;
+    z-index: 1000;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+nav ul li ul li a:hover {
+    background-color: #b71c1c;
+}
+
+/* General Styling for List Items */
+ul li {
+    color: #c62828; /* Deep Red */
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: left; /* Optional: Keep left-aligned */
+}
+
+/* Split container for layout */
+.split-container {
+    display: flex;
+    height: calc(100vh - 140px); /* header + footer height */
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.split {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.left {
+    background-color: #f9f9f9;
+}
+
+.right {
+    background-color: #ffffff;
+    border-left: 2px solid #ddd;
+}
+
+/* Content Image */
+.content-img {
+    max-width: 65%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+/* Main Logo */
+.logo-main {
+    max-width: 45%;
+}
+
+/* Hidden Sections */
+.hidden {
+    display: none;
+}
+
+/* Highlight Text */
+.highlight-text {
+    color: #c62828;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Header Text Styling */
+#logoTextBlock h2 {
+    color: #c62828 !important; /* Deep Red */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Intro Text */
+.intro-text p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #333;
+    text-align: justify;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    color: #777;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Services Page Layout */
+.services-page .split-container {
+    margin-top: 20px;
+    padding: 0 20px;
+    height: auto;
+}
+
+.services-page .split {
+    padding: 20px;
+}
+
+.services-page .left {
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+.services-page .right {
+    background-color: #ffffff;
+    border-left: 2px solid #ddd;
+    text-align: center;
+}
+
+.services-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .split-container {
+        flex-direction: column;
+    }
+
+    .split {
+        border-left: none;
+        border-top: 2px solid #ddd;
+    }
+
+    .services-image {
+        max-width: 100%;
+    }
+}
+/* Refined Services Page styling */
+.services-page h1 {
+    font-size: 1.2em; /* Adjust as needed */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.services-page h2 {
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Make service list items smaller & clean */
+.services-page ul li {
+    font-size: 0.95em;
+    font-weight: normal;
+    color: #333;
+    margin: 8px 0;
+    text-align: left;
+}
+: #333; /* Softer color, optional */
+}
+/* Astrologers Page Layout */
+.astrologers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.astrologer-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+}
+
+.astrologer-card:hover {
+    transform: translateY(-5px);
+}
+
+.astrologer-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.astrologer-card h2 {
+    color: #c62828;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.astrologer-card p {
+    font-size: 0.95em;
+    color: #555;
+    text-align: justify;
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    margin: 30px 0 10px;
+    font-size: 1.8em;
+    color: #c62828;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .astrologers-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Allow scroll for astrologers page */
+body.astrologers-page {
+    overflow: auto;
+}
+/* Astrologers container */
+.astrologers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the cards horizontally */
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Astrologer card */
+.astrologer-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+/* Astrologer photo */
+.astrologer-photo {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Astrologer info */
+.astrologer-info {
+    flex: 1;
+}
+/* Free Tools page */
+.tools-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* reduced from 30px */
+    padding: 10px; /* reduced padding */
+}
+
+.tool-card {
+    max-width: 500px; /* reduced width */
+    width: 100%;
+    background-color: #fff;
+    padding: 15px; /* reduced padding */
+    border: 2px solid #c62828;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    font-size: 0.85em; /* smaller font size */
+}
+
+.tool-card:hover {
+    transform: scale(1.02);
+}
+
+.tool-card h2 {
+    margin-top: 0;
+    color: #c62828;
+    font-size: 1em; /* smaller heading */
+}
+
+.tool-card p {
+    margin: 10px 0;
+    font-size: 0.85em; /* smaller paragraph text */
+    line-height: 1.4;
+}
+
+.tool-link {
+    display: inline-block;
+    margin-top: 10px; /* reduced margin */
+    padding: 8px 16px; /* smaller button */
+    background-color: #c62828;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+.tool-link:hover {
+    background-color: #b71c1c;
+}
+
+/* Optional: shrink title a bit too */
+.page-title {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+body.free-tool-1 {
+    overflow: auto;
+}
+body.free-tool-2 {
+    overflow: auto;
+}
+body.free-tool-3 {
+    overflow: auto;
+}

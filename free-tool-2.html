@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magha Astrology - Tools</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="Magha-logo.png" type="image/png" />
+</head>
+<body class="free-tool-2">
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="Magha-logo.png" alt="Magha Astrology Logo" />
+        </a>
+        <h1>Magha Vedic Astro & Vastu Solutions</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="astrologers.html">Our Astrologers</a></li>
+            <li>
+                <a href="free-tools.html">Free Tools</a>
+                <ul>
+                    <li><a href="free-tool-1.html">Taarabala, Chandrabala and Gurubala Calculator</a></li>
+                    <li><a href="free-tool-2.html">Panchaka Calculator</a></li>
+                    <li><a href="free-tool-3.html">Kuja Dosha Calculator</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+    <main>
+        <div class="tool-frame">
+            <title>Panchaka Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+			padding: 20px;
+        }
+    .container {
+        max-width: 600px;
+        margin: auto;
+    }
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+	#result.good {
+		background-color: lightgreen;
+		color: darkgreen;
+		border-color: green;
+	}
+	#result.not-good {
+		background-color: lightcoral;
+		color: darkred;
+		border-color: red;
+	}
+	#result {
+    margin-top: 20px; /* Creates a gap below the button */
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-weight: bold;
+	}
+	.creator-note {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 12px;
+        color: #888;
+    }
+	.container p {
+        text-align: justify;
+    }
+    </style>
+</head>
+<body>
+    <h1>Panchaka Calculator</h1>
+    <form id="panchakaForm">
+        <div class="form-group">
+            <label for="tithi">Select Tithi:</label>
+            <select id="tithi" required>
+                <option value="1">Prathama</option>
+                <option value="2">Dwitiya</option>
+                <option value="3">Tritiya</option>
+                <option value="4">Chaturthi</option>
+                <option value="5">Panchami</option>
+                <option value="6">Shashti</option>
+                <option value="7">Saptami</option>
+                <option value="8">Ashtami</option>
+                <option value="9">Navami</option>
+                <option value="10">Dashami</option>
+                <option value="11">Ekadashi</option>
+                <option value="12">Dwadashi</option>
+                <option value="13">Trayodashi</option>
+                <option value="14">Chaturdashi</option>
+                <option value="15">Purnima</option>
+                <option value="15">Amavasya</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="day">Select Day:</label>
+            <select id="day" required>
+                <option value="1">Sunday</option>
+                <option value="2">Monday</option>
+                <option value="3">Tuesday</option>
+                <option value="4">Wednesday</option>
+                <option value="5">Thursday</option>
+                <option value="6">Friday</option>
+                <option value="7">Saturday</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="nakshatra">Select Nakshatra:</label>
+            <select id="nakshatra" required>
+                <option value="1">Ashwini</option>
+                <option value="2">Bharani</option>
+                <option value="3">Krittika</option>
+                <option value="4">Rohini</option>
+                <option value="5">Mrigashira</option>
+                <option value="6">Ardra</option>
+                <option value="7">Punarvasu</option>
+                <option value="8">Pushya</option>
+                <option value="9">Ashlesha</option>
+                <option value="10">Magha</option>
+                <option value="11">Purva Phalguni</option>
+                <option value="12">Uttara Phalguni</option>
+                <option value="13">Hasta</option>
+                <option value="14">Chitra</option>
+                <option value="15">Swati</option>
+                <option value="16">Vishakha</option>
+                <option value="17">Anuradha</option>
+                <option value="18">Jyeshtha</option>
+                <option value="19">Mula</option>
+                <option value="20">Purva Ashadha</option>
+                <option value="21">Uttara Ashadha</option>
+                <option value="22">Shravana</option>
+                <option value="23">Dhanishta</option>
+                <option value="24">Shatabhisha</option>
+                <option value="25">Purva Bhadrapada</option>
+                <option value="26">Uttara Bhadrapada</option>
+                <option value="27">Revati</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="lagna">Select Lagna Rashi:</label>
+            <select id="lagna" required>
+                <option value="1" data-extra="5">Mesha</option>
+                <option value="2" data-extra="7">Vrishabha</option>
+                <option value="3" data-extra="0">Mithuna</option>
+                <option value="4" data-extra="0">Karka</option>
+                <option value="5" data-extra="0">Simha</option>
+                <option value="6" data-extra="0">Kanya</option>
+                <option value="7" data-extra="0">Tula</option>
+                <option value="8" data-extra="0">Vrischika</option>
+                <option value="9" data-extra="2">Makara</option>
+                <option value="10" data-extra="4">Kumbha</option>
+                <option value="11" data-extra="6">Meena</option>
+            </select>
+        </div>
+
+        <button type="button" onclick="calculatePanchaka()">Calculate</button>
+    </form>
+
+    <div id="result"></div>
+	<div class="creator-note">Created by: Surya Prasad CA, Mob: 9008777578 (Version 1.0)</div>
+    <script>
+        function calculatePanchaka() {
+			const tithi = parseInt(document.getElementById("tithi").value);
+			const day = parseInt(document.getElementById("day").value);
+			const nakshatra = parseInt(document.getElementById("nakshatra").value);
+			const lagnaElement = document.getElementById("lagna");
+			const lagna = parseInt(lagnaElement.value);
+			const extra = parseInt(lagnaElement.options[lagnaElement.selectedIndex].dataset.extra);
+
+			// Calculate total
+			const total = tithi + day + nakshatra + lagna + extra;
+
+			// Calculate remainder
+			const remainder = total % 9;
+
+			// Determine result
+			const ashubaReminders = [1, 2, 4, 6, 8];
+			const isAshubha = ashubaReminders.includes(remainder);
+
+			const resultText = isAshubha
+			? `Ashubha: Reminder is ${remainder} (${getAshubhaDescription(remainder)})`
+			: `Shubha: Reminder is ${remainder}`;
+
+			// Update the result container
+			const resultElement = document.getElementById("result");
+			resultElement.innerText = resultText;
+
+			// Apply class based on result
+			resultElement.className = isAshubha ? "not-good" : "good";
+		}
+
+		function getAshubhaDescription(remainder) {
+			const descriptions = {
+				1: "Mrityu Baadhe",
+				2: "Agni Baadhe",
+				4: "Raja Baadhe",
+				6: "Chora Baadhe",
+				8: "Roga Baadhe"
+			};
+		return descriptions[remainder] || "Unknown Baadhe";
+		}
+    </script>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Magha Vedic Astro & Vastu Solutions. All rights reserved.
+    </footer>
+</body>
+</html>

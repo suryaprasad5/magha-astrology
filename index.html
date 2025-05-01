@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magha Astrology</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="Magha-logo.png" type="image/png" />
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="Magha-logo.png" alt="Magha Astrology Logo" />
+        </a>
+        <h1>Magha Vedic Astro & Vastu Solutions</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="astrologers.html">Our Astrologers</a></li>
+            <li>
+                <a href="free-tools.html">Free Tools</a>
+                <ul>
+                    <li><a href="free-tool-1.html">Taarabala, Chandrabala and Gurubala Calculator</a></li>
+                    <li><a href="free-tool-2.html">Panchaka Calculator</a></li>
+                    <li><a href="free-tool-3.html">Kuja Dosha Calculator</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <main class="split-container">
+        <div class="split left">
+            <div id="logoBlock">
+                <img src="Magha-logo.png" alt="Magha Logo" class="content-img logo-main" />
+            </div>
+            <div id="logoTextBlock" class="hidden">
+                <h2>Welcome to Magha Vedic Astro & Vastu Solutions</h2>
+            </div>
+        </div>
+
+        <div class="split right">
+            <div id="introBlock">
+                <img src="Introduction-Photo.png" alt="Introduction Photo" class="content-img" />
+            </div>
+            <div id="introTextBlock" class="hidden">
+                <p class="highlight-text">Let us all bow to the Pratyakshya Daiva Bhagavan Surya (Lord Sun)</p>
+                <div class="intro-text">
+                    <p>
+                        Welcome to Magha Vedic Astro & Vastu Solutions, where ancient wisdom meets modern solutions.
+                    </p>
+                    <p>
+                        At Magha, we specialize in Vedic astrology and Vastu solutions, drawing upon the profound insights of the Parashara Hora system, Prashna system, and Jaimini systems. Whether you seek clarity on life's intricate questions or guidance in navigating critical decisions, we are here to illuminate your path.
+                    </p>
+                    <p>
+                        Our services encompass a spectrum of needs, from marriage matchmaking to business and relationship consultations. With a deep understanding of the cosmic influences on human affairs, we offer comprehensive remedies tailored to address diverse challenges.
+                    </p>
+                    <p>
+                        Embracing the digital age, we extend our services both online and offline, ensuring accessibility and convenience without compromising the authenticity of ancient wisdom.
+                    </p>
+                    <p>
+                        Step into the realm of Magha Vedic Astro & Vastu Solutions, where the timeless meets the timely, and discover the transformative power of Vedic insights.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Magha Vedic Astro & Vastu Solutions. All rights reserved.
+    </footer>
+<script>
+    let flipInterval;
+
+    function startFlipping() {
+        flipInterval = setInterval(flipContent, 2000); // flip every 2 seconds
+    }
+
+    function stopFlipping() {
+        clearInterval(flipInterval);
+    }
+
+    function flipContent() {
+        document.getElementById('logoBlock').classList.toggle('hidden');
+        document.getElementById('logoTextBlock').classList.toggle('hidden');
+
+        document.getElementById('introBlock').classList.toggle('hidden');
+        document.getElementById('introTextBlock').classList.toggle('hidden');
+    }
+
+    // Start flipping initially
+    startFlipping();
+
+    // Add pause/resume on mouse events
+    const leftPart = document.querySelector('.left');
+    const rightPart = document.querySelector('.right');
+
+    ['mousedown', 'touchstart'].forEach(evt => {
+        leftPart.addEventListener(evt, stopFlipping);
+        rightPart.addEventListener(evt, stopFlipping);
+    });
+
+    ['mouseup', 'touchend'].forEach(evt => {
+        leftPart.addEventListener(evt, startFlipping);
+        rightPart.addEventListener(evt, startFlipping);
+    });
+</script>
+</body>
+</html>
