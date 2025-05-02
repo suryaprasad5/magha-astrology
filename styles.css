@@ -4,7 +4,6 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
-    overflow: hidden; /* Prevent scroll */
     box-sizing: border-box;
 }
 
