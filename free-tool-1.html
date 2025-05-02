@@ -470,24 +470,32 @@ document.addEventListener('DOMContentLoaded', function () {
     const mm = today.getMonth() + 1; // no leading zero
     const dd = today.getDate();      // no leading zero
 
-    const url = `https://maghaastro.infinityfreeapp.com/api-proxy.php?year=${yyyy}&month=${mm}&date=${dd}`;
-
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data); // debug
-
-            if (data.nakshatra) {
-                document.getElementById('liveNakshatra').innerText = data.nakshatra;
-                document.getElementById('todayNakshatra').value = data.nakshatra;
-            } else {
-                document.getElementById('liveNakshatra').innerText = 'Not available';
-            }
+    fetch('https://magha-astrology.vercel.app/api/proxy', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            year: yyyy,
+            month: mm,
+            date: dd
         })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-            document.getElementById('liveNakshatra').innerText = 'Error fetching Nakshatra';
-        });
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data); // debug
+
+        if (data.output && data.output.name) {
+            document.getElementById('liveNakshatra').innerText = data.output.name;
+            document.getElementById('todayNakshatra').value = data.output.name;
+        } else {
+            document.getElementById('liveNakshatra').innerText = 'Not available';
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+        document.getElementById('liveNakshatra').innerText = 'Error fetching Nakshatra';
+    });
 });
 </script>
 </body>
